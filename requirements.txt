@@ -1,0 +1,38 @@
+# ============================================================================
+# Multi-Task Robot Learning - Dependencies
+# ============================================================================
+# For Apple Silicon (M1/M2/M3): PyBullet has compilation issues
+# SOLUTION: Use MuJoCo instead (better ARM support, production-grade physics)
+# ============================================================================
+
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Vision-Language Models (lightweight)
+transformers>=4.30.0  # For language encoding (DistilBERT)
+timm>=0.9.0           # For vision models (EfficientNet, MobileNet)
+
+# Data & Utilities (install these FIRST)
+numpy>=1.24.0
+pillow>=9.5.0
+tqdm>=4.65.0
+pyyaml>=6.0
+matplotlib>=3.7.0
+
+# Robotics Simulation
+gymnasium>=0.29.0     # RL environment interface
+
+# CHOOSE ONE SIMULATOR BELOW:
+# ----------------------------------------------------------------------------
+# Option A: PyBullet (lightweight, good for learning)
+#           WARNING: Fails to compile on Apple Silicon
+#           If on macOS ARM64, skip this and use Option B
+# pybullet>=3.2.5
+
+# Option B: MuJoCo (RECOMMENDED for Apple Silicon)
+#           Better physics, industry standard, native ARM support
+#           Requires: pip install mujoco first, then dm-control
+mujoco>=3.1.0
+dm-control>=1.0.14
+# ----------------------------------------------------------------------------
