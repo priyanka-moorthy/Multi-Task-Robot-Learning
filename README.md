@@ -18,18 +18,6 @@ MultiTaskAgent/
 └── requirements.txt
 ```
 
-## Current Progress
-
-- [x] Simulator-agnostic architecture
-- [x] PyBullet environment (x86_64)
-- [x] MuJoCo environment (Apple Silicon compatible)
-- [x] 9 multi-task scenarios (3 actions × 3 colors)
-- [x] Auto-detection of available simulator
-- [ ] Vision encoder (EfficientNet)
-- [ ] Language encoder (DistilBERT)
-- [ ] Fusion module (Cross-attention)
-- [ ] Action prediction head
-- [ ] Training pipeline
 
 ## Setup
 
